@@ -10,14 +10,16 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 public class Resources {
 
-	public Sprite title = new Sprite(new Texture(Gdx.files.internal("data/spritepack/title.png")));
-	public Sprite credits = new Sprite(new Texture(Gdx.files.internal("data/spritepack/credits.png")));
+	public static String DATA_DIR = "data";
+
+	public Sprite title = new Sprite(new Texture(Gdx.files.internal(DATA_DIR + "/spritepack/title.png")));
+	public Sprite credits = new Sprite(new Texture(Gdx.files.internal(DATA_DIR + "/spritepack/credits.png")));
 	
-	public TextureAtlas atlas = new TextureAtlas(Gdx.files.internal("data/spritepack/packhigh.pack"));
+	public TextureAtlas atlas = new TextureAtlas(Gdx.files.internal(DATA_DIR + "/spritepack/packhigh.pack"));
 	// public AtlasRegion region = atlas.findRegion("imagename");
 	// Sprite sprite = atlas.createSprite("otherimagename");
 
-	public Music music = Gdx.audio.newMusic(Gdx.files.internal("data/audio/music.mp3"));
+	public Music music = Gdx.audio.newMusic(Gdx.files.internal(DATA_DIR + "/audio/music.mp3"));
 
 	public Sprite factoryP1 = atlas.createSprite("factoryp1");
 	public Sprite factoryP2 = atlas.createSprite("factoryp2");
@@ -140,9 +142,9 @@ public class Resources {
 		
 		Preferences prefs = Gdx.app.getPreferences("paxbritannica");
 		if (prefs.getInteger("antiAliasConfig", 1) == 0) {
-			atlas = new TextureAtlas(Gdx.files.internal("data/spritepack/pack.pack"));
+			atlas = new TextureAtlas(Gdx.files.internal(DATA_DIR + "/spritepack/pack.pack"));
 		} else {
-			atlas = new TextureAtlas(Gdx.files.internal("data/spritepack/packhigh.pack"));
+			atlas = new TextureAtlas(Gdx.files.internal(DATA_DIR + "/spritepack/packhigh.pack"));
 		}
 
 		try {
@@ -150,9 +152,9 @@ public class Resources {
 				music.stop();
 				music.dispose();
 			} 
-			music = Gdx.audio.newMusic(Gdx.files.internal("data/audio/music.mp3"));
+			music = Gdx.audio.newMusic(Gdx.files.internal(DATA_DIR + "/audio/music.mp3"));
 		} catch (Exception e) {
-			music = Gdx.audio.newMusic(Gdx.files.internal("data/audio/music.mp3"));
+			music = Gdx.audio.newMusic(Gdx.files.internal(DATA_DIR + "/audio/music.mp3"));
 		}
 
 		factoryP1 = atlas.createSprite("factoryp1");
@@ -262,9 +264,9 @@ public class Resources {
 		checkboxOn = atlas.createSprite("checkboxon");
 		checkboxOff = atlas.createSprite("checkboxoff");
 
-		title = new Sprite(new Texture(Gdx.files.internal("data/spritepack/title.png")));
+		title = new Sprite(new Texture(Gdx.files.internal(DATA_DIR + "/spritepack/title.png")));
 		title.getTexture().setFilter(TextureFilter.Linear, TextureFilter.Linear);
-		credits = new Sprite(new Texture(Gdx.files.internal("data/spritepack/credits.png")));
+		credits = new Sprite(new Texture(Gdx.files.internal(DATA_DIR + "/spritepack/credits.png")));
 		credits.getTexture().setFilter(TextureFilter.Linear, TextureFilter.Linear);
 	}
 

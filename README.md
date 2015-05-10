@@ -1,7 +1,7 @@
-libgdx-demo-pax britannica
+scala-libgdx-pax-britannica
 ====================
 
-  Libgdx demo - Pax Britannica
+  Libgdx demo - Pax Britannica rewritten in Scala
 
 ![pax-britannica](http://i.imgur.com/evYlHaf.png)
 
@@ -20,3 +20,7 @@ Pax Britannica is a one-button [RTS game by nofundsgames](http://paxbritannica.h
   * [Intellij IDEA](https://github.com/libgdx/libgdx/wiki/Gradle-and-Intellij-IDEA)
   * [NetBeans](https://github.com/libgdx/libgdx/wiki/Gradle-and-NetBeans)
   * [Commandline|Gradle on the Commandline](https://github.com/libgdx/libgdx/wiki/Gradle-on-the-Commandline)
+
+### Running with SBT
+* sbt desktop/run
+* sbt android/android:run
